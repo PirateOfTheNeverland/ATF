@@ -1,0 +1,114 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+:focus {
+	outline: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* reset styles end */
+
+body
+{
+    width:100%;
+    background-color: white;
+}
+
+.panel
+{
+    padding: 10px 20px 10px 20px;
+	line-height: 1.3;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+.panel h1 {
+	font-size: 16pt;
+	margin-bottom: 12px;
+}
+
+.panelTitle
+{
+    background-color: white;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    padding: 60px 0px 15px 20px;
+    background-position: 10 10;
+    
+	line-height: 1.3;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+.panelTitle h1 {
+	font-size: 16pt;
+	margin-bottom: 12px;
+}
+
+.shutdownWarningPanel {
+    padding: 5px 20px 15px 50px;
+	background-color:#C45E00;
+    background-image: url("warning.png");
+    background-repeat: no-repeat;
+    background-position: 10 10;
+	line-height: 1.3;
+	font-family: Arial;
+	font-size: 12px;
+	
+}
+.shutdownWarningPanel h1 {
+	font-family: FranklinGothicMediumCondTT;
+	font-size: 14pt;
+	margin-bottom: 12px;
+}
+
+
+.buttonPanel {
+	text-align: center;
+	
+	background-color:#F2F2F2;
+	padding: 20px;
+	
+	line-height: 1.3;
+	font-family: Arial;
+	font-size: 12px;
+	text-align: right;
+	
+}
+
+.buttonPanel .left
+{
+    float: left;
+}
+
+.buttonPanel .right
+{
+}
+    
+
+.linkButton {
+    color: green;
+}
+
+.greenButton  {
+    background-color: #00B593;
+}
+

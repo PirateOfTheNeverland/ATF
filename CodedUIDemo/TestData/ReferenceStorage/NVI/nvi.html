@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>New Version Info content</title>
+    		<link href="newVersionInfo.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>Hello friends!!!
+	<img src='iso_logo.png'>
+	<br>
+	<img src='iso_bcg.jpg'>
+	<br>
+	<div class="container">
+        <div class="panelTitle">
+            <h1>New version available</h1>
+            <p>Kaspersky Internet Security 2015 is available. We strongly recommend you to update your current version of Kaspersky Internet Security for maximum protection.<a href="#" ipmAction="openUrl" ipmParam="http://ya.ru">Learn more</a></p>
+        </div>
+        <div class="panel" id="downloadSizePanel" ipmAction="showHidePanel" ipmParam="updateSizePanel">
+            <p>Download size: <span id="downloadSizeSpan" ipmAction="updatesizeinmbytes"></span> MB</p>
+        </div>
+        <div class="panel" id="eulaPanel" ipmAction="showHidePanel" ipmParam="eulaPanel">
+            <input id="eulaCheckbox" type="checkbox" value="true" ipmAction ="acceptEndUserLicenseAgreement" ipmParam="onAcceptEulaChanged()" /> I accept the <a id="eulaLink" href="#" ipmAction="showEndUserLicenseAgreementWindow">End User License Agreement</a>
+        </div>
+        <div class="panel" id="ksnPanel" ipmAction="showHidePanel" ipmParam="ksnPanel">
+            <input id="ksnCheckbox" type="checkbox" value="true" ipmAction="acceptKsnAgreementFlag" ipmParam="onAcceptKsnChanged()" /> I want to participate in <a id="ksnLink" href="#" ipmAction="showKsnUserAgreementWindow">Kaspersky Security Network</a>
+        </div>
+        <div class="shutdownWarningPanel" id="shutdownWarningPanel" ipmAction="showHidePanel" ipmParam="updateOnShutdownPanel">
+            <h1>Update during system shutdown</h1>
+            <p>Some text about installation during system shutdown. Some warning abount what will happen if user will unplug power or hard reset his PC during this process</p>
+        </div>
+        <div class="buttonPanel">
+            <span class="left">
+               
+            </span>
+            <span class="right">
+               <input type="button" id="remindLaterButton" class="greyButton" value="Remind me later" ipmAction="updateNotNow" />
+               <input type="button" id="nowNowButton" class="greyButton" value="Not now" ipmAction="postponeUpdate" />
+               <input type="button" id="updateButton" class="greenButton" value="Update" ipmAction="installUpdate" />
+               <input type="button" id="downloadAndUpdate" class="greenButton" value="Download and update" ipmAction="downloadAndInstallUpdate" />
+            </span >
+        </div>
+    </div>
+	<br>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+c:\users\ext_zvezdin.kl\documents\visual studio 2012\Projects\CodedUIDemo\CodedUIDemo\bin\Debug\CodedUIDemo.dll
+c:\users\ext_zvezdin.kl\documents\visual studio 2012\Projects\CodedUIDemo\CodedUIDemo\bin\Debug\CodedUIDemo.pdb
+c:\users\ext_zvezdin.kl\documents\visual studio 2012\Projects\CodedUIDemo\CodedUIDemo\obj\Debug\CodedUIDemo.dll
+c:\users\ext_zvezdin.kl\documents\visual studio 2012\Projects\CodedUIDemo\CodedUIDemo\obj\Debug\CodedUIDemo.pdb
+c:\users\ext_zvezdin.kl\documents\visual studio 2012\Projects\CodedUIDemo\CodedUIDemo\bin\Debug\TestData.csv
+C:\Users\ext_zvezdin.KL\Documents\Visual Studio 2012\Projects\CodedUIDemo\CodedUIDemo\bin\Debug\NewsData.csv
+C:\Users\ext_zvezdin.KL\Documents\Visual Studio 2012\Projects\CodedUIDemo\CodedUIDemo\bin\Debug\72661_ContentRegretPage.csv
+C:\Users\ext_zvezdin.KL\Documents\Visual Studio 2012\Projects\CodedUIDemo\CodedUIDemo\bin\Debug\72671_ContentUCP.csv
+C:\Users\ext_zvezdin.KL\Documents\Visual Studio 2012\Projects\CodedUIDemo\CodedUIDemo\bin\Debug\Ionic.Zip.dll
+C:\Users\ext_zvezdin.KL\Documents\Visual Studio 2012\Projects\CodedUIDemo\CodedUIDemo\obj\Debug\CodedUIDemo.csprojResolveAssemblyReference.cache

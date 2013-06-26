@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript">
+if (typeof (window.IpmCommandHandler) == 'undefined' && typeof (window.external) != 'undefined') {
+    window.IpmCommandHandler = window.external;
+}
+
+var JSON = JSON || {};
+
+JSON.stringify = JSON.stringify || function (obj) {
+
+    var t = typeof (obj);
+    if (t != "object" || obj === null) {
+        if (t == "string") obj = '"' + obj + '"';
+        return String(obj);
+    }
+    else {
+        var n, v, json = [], arr = (obj && obj.constructor == Array);
+        for (n in obj) {
+            v = obj[n]; t = typeof (v);
+            if (t == "string") v = '"' + v + '"';
+            else if (t == "object" && v !== null) v = JSON.stringify(v);
+            json.push((arr ? "" : '"' + n + '":') + String(v));
+        }
+        return (arr ? "[" : "{") + String(json) + (arr ? "]" : "}");
+    }
+};
+
+JSON.parse = JSON.parse || function (str) {
+    if (str === "") str = '""';
+    eval("var p=" + str + ";");
+    return p;
+};
+
+var ipm = new function () {
+
+    this.element = function (elementId) {
+        return document.getElementById(elementId);
+    };
+
+    this.reportIpmStatistics = function (elementId, action) {
+        var statistics = { ActionElementId: elementId, ActionType: action };
+        window.IpmCommandHandler.reportStatistics(JSON.stringify(statistics));
+    };
+
+    this.setVisibility = function (elementId, visible) {
+        document.getElementById(elementId).style.display = visible ? "" : "none";
+    };
+
+    this.setCheckbox = function (elementId, checked) {
+        document.getElementById(elementId).checked = checked;
+    };
+
+    this.getCheckbox = function (elementId) {
+        return document.getElementById(elementId).checked;
+    };
+
+    this.addOnClickEventListener = function (elementId, onClickListener) {
+        var element = document.getElementById(elementId);
+        if (element.addEventListener) {
+            element.addEventListener('click', onClickListener, false);
+        } else {
+            element.attachEvent('onclick', onClickListener);
+        }
+    };
+
+    this.addDocumentReadyEventListener = function (onDocumentReadyListener) {
+        if (document.addEventListener) {
+            document.addEventListener("DOMContentLoaded", onDocumentReadyListener, false);
+        } else {
+            document.attachEvent("onreadystatechange",
+								function () {
+								    if (document.readyState == "complete")
+								        onDocumentReadyListener();
+								});
+        }
+    };
+};
+
+ipm.addDocumentReadyEventListener(function() { ipm.reportIpmStatistics('eol.html',1); });
+function ipmCloseWindow(elementId){
+			if(elementId){
+                ipm.reportIpmStatistics(elementId,2);
+            }
+			window.IpmCommandHandler.closeWindow();
+		}
+function ipmOpenHelp(elementId, topicId){
+			if(elementId){
+				ipm.reportIpmStatistics(elementId, 2);
+			}
+			window.IpmCommandHandler.openHelp(topicId);			
+		}
+function ipmOpenUrl(elementId, url){
+			if(elementId){
+				ipm.reportIpmStatistics(elementId, 2);
+			}
+			window.IpmCommandHandler.openUrl(url);			
+		}
+function ipmOpenProductStore(elementId, page){
+			if(elementId){
+				ipm.reportIpmStatistics(elementId, 2);
+			}
+			window.IpmCommandHandler.openProductStore(page);			
+		}
+function ipmOpenCustomProductStore(elementId, url){
+			if(elementId){
+				ipm.reportIpmStatistics(elementId, 2);
+			}
+			window.IpmCommandHandler.openCustomProductStore(url);			
+		}
+function ipmOpenApplicationPage(elementId, page){
+			if(elementId){
+				ipm.reportIpmStatistics(elementId, 2);
+			}
+			window.IpmCommandHandler.openApplicationPage(page);			
+		}</script></head>
+	<body>Hello friends!!!
+	<img src='iso_logo.png' />
+	<br />
+	<iframe src='second.html' width="100%" height="300">  
+             <p>Your browser does not support iframes.</p>  
+    </iframe>
+	<br />
+
+	<a href="#" onclick="ipmCloseWindow('closeButton')">ЗакрытьОкно</a>
+	<a href="#" onclick="ipmOpenHelp('helpButton','123')">ХЭЛП</a>
+	<a href="#" onclick="ipmOpenUrl('openUrlButton','http://kaspersky.com')">текст ссылки</a>
+	
+	<input type="button" value="надпись на кнопке" onclick="ipmOpenProductStore(null,'Buy')" />
+	<input type="button" value="надпись на кнопке" onclick="ipmOpenCustomProductStore(null,'http://kaspersky.com')" />
+	<a href="#" onclick="ipmOpenApplicationPage('openApplicationPageButton','SettingsScan')">текст ссылки</a>
+	</body>
+</html>

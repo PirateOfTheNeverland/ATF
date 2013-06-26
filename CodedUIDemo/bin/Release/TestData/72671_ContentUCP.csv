@@ -1,0 +1,2 @@
+TestServer,Name,UCPConType,UCPRegURL
+"http://ipm2.avp-test.ru/default.aspx","UCP_Settings","Registration Always","http://ucp.registration.url.com"
